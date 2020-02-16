@@ -5,8 +5,16 @@ public class Conta {
 	private int agencia;
 	private int numero;
 	private Cliente titular; // recebe o objeto Cliente
+	private static int total; // atributo estático quer dizer que é da classe
 
-
+	// constructor:
+	public Conta(int agencia, int numero) {
+		Conta.total++;
+		//System.out.println("o total de contas é: " + total);
+		this.agencia = agencia;
+		this.numero = numero;
+		System.out.println("Conta criada " + this.getAgencia());
+	}
 	// métodos:
 	public void deposita(double valor) { // void não devolve nada como resposta
 		this.saldo += valor;
@@ -47,6 +55,10 @@ public class Conta {
 	}
 	
 	public void setNumero(int numero) {
+		if(numero <= 0) {
+			System.out.println("não pode valor menor ou igual a 0");
+			return;
+		}
 		this.numero = numero;
 	}
 	
@@ -55,6 +67,10 @@ public class Conta {
 	}
 	
 	public void setAgencia(int agencia) {
+		if(agencia <= 0) {
+			System.out.println("não pode valor menor ou igual a 0");
+			return;
+		}
 		this.agencia = agencia;
 	}
 	
@@ -64,5 +80,9 @@ public class Conta {
 	
 	public Cliente getTitular() {
 		return titular;
+	}
+	
+	public static int getTotal() { //anuncia que o método é da classe
+		return Conta.total;
 	}
 }
