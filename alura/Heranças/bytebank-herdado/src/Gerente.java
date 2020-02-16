@@ -27,10 +27,15 @@ public class Gerente extends Funcionario{
 //	}
 	// end opcao sem protected
 	// com protected
-	public double getBonificacao() {
-		return super.salario *= 1.5; // super fala que é da classe máe
-		// enquanto this fala que é da classe atual
-	}
+//	public double getBonificacao() {
+//		return super.salario *= 1.5; // super fala que é da classe máe
+//		// enquanto this fala que é da classe atual
+//	}
 	// end com protected
+	//protect com metodo
+	public double getBonificacao() {
+		return super.getBonificacao() + super.getSalario();
+	}
+	// end protect com metodo
 	// end bonificacao
 }
