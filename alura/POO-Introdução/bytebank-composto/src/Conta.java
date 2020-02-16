@@ -1,10 +1,10 @@
 public class Conta {
 
 	// atributos: (propriedades)
-	double saldo;
+	double saldo = 100;
 	int agencia;
 	int numero;
-	String titular;
+	Cliente titular; // recebe o objeto Cliente
 
 
 	// métodos:

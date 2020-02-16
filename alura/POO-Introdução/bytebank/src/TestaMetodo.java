@@ -15,5 +15,8 @@ public class TestaMetodo {
 		System.out.println("Transferencia concluida");
 		System.out.println("Saldo atual: " + contaDaMarcela.saldo);
 		System.out.println("Saldo atual: " + contaDoPaulo.saldo);
+		
+		contaDoPaulo.titular = "Paulo Silveira";
+		System.out.println(contaDoPaulo.titular);
 	}
 }
