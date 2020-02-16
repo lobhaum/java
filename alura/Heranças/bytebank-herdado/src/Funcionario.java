@@ -4,7 +4,8 @@ public class Funcionario {
 	// atributos:
 	private String nome;
 	private String cpf;
-	private double salario;
+	// sem protected: private double salario;
+	protected double salario; // protected significa publico para filhos e privado para fora.
 	
 	// metodos:
 	

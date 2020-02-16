@@ -15,5 +15,10 @@ public class TesteGerente {
 		gerente.setSenha(2222);
 		boolean autenticou = gerente.autentica(2222);
 		System.out.println("Autenticou: " + autenticou);
+		
+		// opção sem protected
+		//System.out.println("Bonus: " + gerente.getBonificacao());
+		//opção com protected
+		System.out.println("Bonus: " + gerente.getBonificacao());
 	}
 }

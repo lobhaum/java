@@ -21,8 +21,16 @@ public class Gerente extends Funcionario{
 	// end autenticacação
 
 	// metodo bonificacao
+	// opção sem protected
 //	public double getBonificacao() {
-//		return this.salario * 1.5;
+//		return getSalario() * 1.5;
 //	}
+	// end opcao sem protected
+	// com protected
+	public double getBonificacao() {
+		return super.salario *= 1.5; // super fala que é da classe máe
+		// enquanto this fala que é da classe atual
+	}
+	// end com protected
 	// end bonificacao
 }
