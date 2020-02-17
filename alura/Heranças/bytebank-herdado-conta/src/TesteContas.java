@@ -10,7 +10,7 @@ public class TesteContas {
 		contaPoupanca.deposita(10500.29);
 		System.out.println(contaCorrente.getSaldo());
 		
-		contaCorrente.transfere(1500.0, contaPoupanca);
+		contaCorrente.transfere(1000.0, contaPoupanca);
 		System.out.println("Saldo Conta Corrente: " + contaCorrente.getSaldo());
 		System.out.println("Saldo Conta Poupança: " + contaPoupanca.getSaldo());
 	}
