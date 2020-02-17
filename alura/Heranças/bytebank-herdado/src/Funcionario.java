@@ -32,8 +32,10 @@ public abstract class Funcionario {
 	//end gets and sets
 	
 	// metodo bonificacao
-	public double getBonificacao() {
-		return this.salario * 0.1;
-	}
+	// metodo abstrato não tem corpo de implementação
+	public abstract double getBonificacao() //{
+		//return this.salario * 0.1;
+		// return -1;
+	//}
 
 }
