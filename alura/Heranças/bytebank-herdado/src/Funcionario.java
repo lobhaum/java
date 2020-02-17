@@ -1,5 +1,5 @@
 
-public class Funcionario {
+public abstract class Funcionario {
 	
 	// atributos:
 	private String nome;
