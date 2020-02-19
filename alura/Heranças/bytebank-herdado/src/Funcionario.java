@@ -1,42 +1,34 @@
 
+//nao pode instanciar dessa classe, pq é abstrata
 public abstract class Funcionario {
 	
-	// atributos:
 	private String nome;
 	private String cpf;
-	// sem protected: private double salario;
-	protected double salario; // protected significa publico para filhos e privado para fora.
+	private double salario;
 	
-	// metodos:
+	//metodo sem corpo, nao há implementacao
+	public abstract double getBonificacao();
 	
-	//gets and sets
 	public String getNome() {
-		return this.nome;
+		return nome;
 	}
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
 	public String getCpf() {
-		return this.cpf;
+		return cpf;
 	}
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 	public double getSalario() {
-		return this.salario;
+		return salario;
 	}
 	public void setSalario(double salario) {
 		this.salario = salario;
 	}
 	
-	//end gets and sets
 	
-	// metodo bonificacao
-	// metodo abstrato n�o tem corpo de implementa��o
-	public abstract double getBonificacao(); 
-	//{
-		//return this.salario * 0.1;
-		// return -1;
-	//}
+	
 
 }

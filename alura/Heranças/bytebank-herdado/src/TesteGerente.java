@@ -1,24 +1,23 @@
 
 public class TesteGerente {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) {		
+		Gerente g1 = new Gerente();
+		g1.setNome("Marco");
+		g1.setCpf("235568413");
+		g1.setSalario(5000.0);
 		
-		Gerente gerente = new Gerente();
-		gerente.setNome("Pinguim de Madagascar");
-		gerente.setCpf("222.222.333-44");
-		gerente.setSalario(15000.0);
+		System.out.println(g1.getNome());
+		System.out.println(g1.getCpf());
+		System.out.println(g1.getSalario());
 		
-		System.out.println("Nome: " + gerente.getNome());
-		System.out.println("CPF : " + gerente.getCpf());
-		System.out.println("Salário: " + gerente.getSalario());
+		g1.setSenha(2222);
+		boolean autenticou = g1.autentica(2222);
 		
-		gerente.setSenha(2222);
-		boolean autenticou = gerente.autentica(2222);
-		System.out.println("Autenticou: " + autenticou);
+		System.out.println(autenticou);
 		
-		// opção sem protected
-		//System.out.println("Bonus: " + gerente.getBonificacao());
-		//opção com protected
-		System.out.println("Bonus: " + gerente.getBonificacao());
+		System.out.println(g1.getBonificacao());
+
 	}
+
 }

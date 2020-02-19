@@ -1,17 +1,16 @@
 
 public class TesteContas {
-
 	public static void main(String[] args) {
 		
-		ContaCorrente contaCorrente = new ContaCorrente(2978, 7651);
-		ContaPoupanca contaPoupanca = new ContaPoupanca(2978, 76510);
+		ContaCorrente cc = new ContaCorrente(111,222);
+		cc.deposita(100.00);
 		
-		contaCorrente.deposita(1500.0);
-		contaPoupanca.deposita(10500.29);
-		System.out.println(contaCorrente.getSaldo());
+		ContaPoupanca cp = new ContaPoupanca(222,222);
+		cp.deposita(200.00);
 		
-		contaCorrente.transfere(1000.0, contaPoupanca);
-		System.out.println("Saldo Conta Corrente: " + contaCorrente.getSaldo());
-		System.out.println("Saldo Conta Poupança: " + contaPoupanca.getSaldo());
+		cc.transfere(10.00,cp);
+		
+		System.out.println("CC: " + cc.getSaldo());
+		System.out.println("CP: " + cp.getSaldo());
 	}
 }
