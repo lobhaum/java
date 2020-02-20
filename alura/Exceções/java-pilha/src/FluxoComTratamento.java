@@ -4,7 +4,7 @@ public class FluxoComTratamento {
         System.out.println("Ini do main");
         try {
 			metodo1();
-		} catch (ArithmeticException  | NullPointerException e) {
+		} catch (ArithmeticException  | NullPointerException | MinhaExcecao e) {
 			// TODO: handle exception
 			//System.out.println("ArithmeticException");
 			//System.out.println(e);
