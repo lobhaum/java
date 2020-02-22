@@ -1,9 +1,9 @@
 package br.com.bytebank.banco.test.util;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Consumer;
 
 import br.com.bytebank.banco.modelo.Cliente;
 import br.com.bytebank.banco.modelo.Conta;
@@ -44,59 +44,15 @@ public class Teste {
 		lista.add(cc3);
 		lista.add(cc4);
 
-		for (Conta conta : lista) {
-			System.out.println(conta);
-		}
-		lista.sort(null);
-		System.out.println("-----------");
-		/**
-		 * Ordenação da lista
-		 */
-		// NumeroContaComparator comparador = new NumeroContaComparator();
-		// TitularContaComparator titularComparador = new TitularContaComparator();
-		lista.sort(new TitularContaComparator());
-		//lista.sort(comparador);
+		lista.sort((conta01, conta02) -> Integer.compare(conta01.getNumero(), conta02.getNumero()));
+		Comparator<Conta> comp = (Conta nomeO1, Conta nomeO2) -> {
+			String nomeC1 = nomeO1.getTitular().getNome();
+			String nomeC2 = nomeO2.getTitular().getNome();
 
-		// Collections.sort(lista, new NumeroContaComparator());
-		// Collections.sort(lista);
-		// Collections.reverse(lista);
-		
-		for (Conta conta : lista) {
-			System.out.println(conta + ", " + conta.getTitular().getNome());
-		}
+			return nomeO1.compareTo(nomeO2);
 
-	}
-
-}
-
-class NumeroContaComparator implements Comparator<Conta> {
-
-	@Override
-	public int compare(Conta conta01, Conta conta02) {
-
-		return Integer.compare(conta01.getNumero(), conta02.getNumero());
-		
-		// return conta01.getNumero() - conta02.getNumero();
-		
-//		if (conta01.getNumero() < conta02.getNumero()) {
-//			return -1;
-//		}
-//		if (conta01.getNumero() > conta02.getNumero()) {
-//			return 1;
-//		}
-//		return 0;
-	}
-
-}
-
-class TitularContaComparator implements Comparator<Conta> {
-
-	@Override
-	public int compare(Conta o1, Conta o2) {
-		String nomeO1 = o1.getTitular().getNome();
-		String nomeO2 = o2.getTitular().getNome();
-
-		return nomeO1.compareTo(nomeO2);
+		};
+		lista.forEach((conta) -> System.out.println(conta + ", " + conta.getTitular().getNome()));
 
 	}
 
