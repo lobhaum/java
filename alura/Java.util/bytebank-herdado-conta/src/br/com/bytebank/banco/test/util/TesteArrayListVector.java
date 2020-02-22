@@ -36,7 +36,9 @@ public class TesteArrayListVector {
 //			Object oRef = lista.get(i);
 //			System.out.println(oRef);
 //		}
-
+		/**
+		 * Imprime lista de contas
+		 */
 		for (Object object : lista) {
 			System.out.println(object);
 		}
