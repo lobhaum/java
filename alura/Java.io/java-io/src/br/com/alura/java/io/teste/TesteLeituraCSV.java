@@ -29,9 +29,12 @@ public class TesteLeituraCSV {
 			int numero = linhaScanner.nextInt();
 			String cliente = linhaScanner.next();
 			double saldo = linhaScanner.nextDouble();
-			System.out.println("Agencia: " + agencia + " " 
-					+ tipoConta + ": " +  numero + " " +
-					cliente + " R$ " + saldo );
+			String formatada = String.format(new Locale("pt", "BR"), "Banco do Brasil 001 Agencia:%04d %s:%06d Fav.:%20s R$ %7.2f ",
+											agencia, tipoConta, numero, cliente, saldo);
+			System.out.println(formatada);
+			//			System.out.println("Agencia: " + agencia + " " 
+//					+ tipoConta + ": " +  numero + " " +
+//					cliente + " R$ " + saldo );
 			
 			linhaScanner.close();
 			
