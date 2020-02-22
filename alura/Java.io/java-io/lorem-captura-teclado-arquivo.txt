@@ -1,0 +1,2 @@
+Teste de captura de texto no console.
+Tentando encerrar com enter.
