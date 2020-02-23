@@ -10,22 +10,18 @@ import java.io.Writer;
 public class TesteEscrita {
 
 	public static void main(String[] args) throws IOException {
-
-		// Fluxo de entrada com arquivo
-
-		OutputStream fos = new FileOutputStream("lorem-gravacao.txt");
+		
+		//Fluxo de Entrada com Arquivo
+		OutputStream fos = new FileOutputStream("lorem2.txt");
 		Writer osw = new OutputStreamWriter(fos);
 		BufferedWriter bw = new BufferedWriter(osw);
-
-		bw.write("Leva algum tempo para você "
-				+ "realmente assimilar que você é bom o suficiente.");
-		bw.newLine();
-		bw.newLine();
-		bw.write("Eu acredito em você e na sua capacidade porque conheço "
-				+ "o seu esforço e a sua motivação. Não desista!");
 		
+		bw.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod");
+//		bw.newLine();
+		bw.newLine();
+		bw.write("asfasdfsafdas dfs sdf asf assdÃŸ");
+				
 		bw.close();
-
+		
 	}
-
 }

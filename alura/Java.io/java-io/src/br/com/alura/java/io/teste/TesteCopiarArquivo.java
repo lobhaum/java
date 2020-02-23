@@ -11,36 +11,32 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Reader;
 import java.io.Writer;
+import java.net.Socket;
 
 public class TesteCopiarArquivo {
 
 	public static void main(String[] args) throws IOException {
-
-		// Fluxo de entrada com arquivo:
-		InputStream fis = new FileInputStream("lorem.txt");
+		
+//		Socket s = new Socket();		
+		InputStream fis = System.in; //new FileInputStream("lorem.txt");
 		Reader isr = new InputStreamReader(fis);
 		BufferedReader br = new BufferedReader(isr);
-
-		// Fluxo de saida com arquivo:
-		OutputStream fos = new FileOutputStream("lorem-copia-arquivo.txt");
+		
+		OutputStream fos = System.out;  //new FileOutputStream("lorem2.txt");
 		Writer osw = new OutputStreamWriter(fos);
 		BufferedWriter bw = new BufferedWriter(osw);
-
-		// Lê a linha atual:
+		
 		String linha = br.readLine();
-
-		// Grava a linha atual no buffer de gravação e na sequencia
-		// atribui a linha o proximo buffer:
-		while (linha != null) {
+		
+		while( !(linha == null || linha.isEmpty()) ) {
 			bw.write(linha);
-			bw.newLine(); //grava uma linha em branco
+			bw.newLine();
+			bw.flush();
 			linha = br.readLine();
 		}
-
-		// Fecha o arquivo para leitura e gravação:
+	
 		br.close();
 		bw.close();
-
+		
 	}
-
 }
