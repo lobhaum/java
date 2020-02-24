@@ -2,6 +2,7 @@ package br.com.alura.testes;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 import br.com.alura.Aula;
 
@@ -29,6 +30,9 @@ public class TesteListaAula {
 		
 		// Imprimindo o ArrayList reordenado: 
 		System.out.println(aulas);
+		
+		// Comparator.comparing comparando o tempo de video de cada aula:
+		Collections.sort(aulas, Comparator.comparing(Aula::getTempo));
 	}
 	
 	
