@@ -31,7 +31,7 @@ public class TesteListaAula {
 		// Imprimindo o ArrayList reordenado: 
 		System.out.println(aulas);
 		
-		// Comparator.comparing comparando o tempo de video de cada aula:
+		// Comparator.comparing comparando o tempo de// Igual comparator.comparing de forma menos verbosa: video de cada aula:
 		Collections.sort(aulas, Comparator.comparing(Aula::getTempo));
 		
 		// Imprimindo o ArrayList reordenado via comparing: 
