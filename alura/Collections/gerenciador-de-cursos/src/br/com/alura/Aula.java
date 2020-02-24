@@ -30,5 +30,17 @@ public class Aula {
 	public int getTempo() {
 		return tempo;
 	}
+	/**
+	 * Reescrevendo o método toString de Object
+	 * Para mostrar em tela em formato humano o
+	 * ArrayList
+	 */
+	@Override
+	public String toString() {
+		
+		return "[Aula: " + this.titulo +
+				", " + this.tempo +
+				" minutos]";
+	}
 
 }
