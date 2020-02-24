@@ -1,6 +1,6 @@
 package br.com.alura;
 
-public class Aula {
+public class Aula implements Comparable<Aula>{
 	
 	public String titulo;
 	private int tempo;
@@ -42,5 +42,15 @@ public class Aula {
 				", " + this.tempo +
 				" minutos]";
 	}
+	/**
+	 * Sobreescrevendo metodo compareTo
+	 * Adicionando a implementação Comparable<Aula> da classe Aula
+	 * retornando se este titulo lexograficamente vem antes do titulo a seguir
+	 */
+	@Override
+	public int compareTo(Aula outraAula) {
+		return this.titulo.compareTo(outraAula.titulo);
+	}
+
 
 }
