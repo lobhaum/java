@@ -11,7 +11,7 @@ public class TesteListaAula {
 	public static void main(String[] args) {
 		// Instanciando os objetos aula?? e alimentando o construtor:
 		Aula aula01 = new Aula("Revistando as ArralyLists", 21);
-		Aula aula02 = new Aula("lista de objetos", 15);
+		Aula aula02 = new Aula("lista de objetos", 20);
 		Aula aula03 = new Aula("Relacionamento de listas e objetos", 15);
 		
 		
@@ -33,6 +33,12 @@ public class TesteListaAula {
 		
 		// Comparator.comparing comparando o tempo de video de cada aula:
 		Collections.sort(aulas, Comparator.comparing(Aula::getTempo));
+		
+		// Imprimindo o ArrayList reordenado via comparing: 
+				System.out.println(aulas);
+		
+		// Igual comparator.comparing de forma menos verbosa:
+		aulas.sort(Comparator.comparing(Aula::getTempo));		
 	}
 	
 	
