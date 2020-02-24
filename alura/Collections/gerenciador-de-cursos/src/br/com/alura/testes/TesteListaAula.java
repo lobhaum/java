@@ -14,16 +14,21 @@ public class TesteListaAula {
 		Aula aula03 = new Aula("Relacionamento de listas e objetos", 15);
 		
 		
-		//Instanciando Arraylist aulas e adicionando objetos aulas??:
+		// Instanciando Arraylist aulas e adicionando objetos aulas??:
 		ArrayList<Aula> aulas = new ArrayList<Aula>();
 		aulas.add(aula01);
 		aulas.add(aula02);
 		aulas.add(aula03);
 		
-		//Imprimindo ArrayList aulas:
+		// Imprimindo ArrayList aulas:
 		System.out.println(aulas);
 		
+		// Ordenando alfabeticamente através do metódo 
+		// compareTo reescrito em Aula.java:
 		Collections.sort(aulas);
+		
+		// Imprimindo o ArrayList reordenado: 
+		System.out.println(aulas);
 	}
 	
 	
