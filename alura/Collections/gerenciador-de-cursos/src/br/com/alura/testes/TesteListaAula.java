@@ -18,6 +18,9 @@ public class TesteListaAula {
 		aulas.add(aula01);
 		aulas.add(aula02);
 		aulas.add(aula03);
+		
+		//Imprimindo ArrayList aulas:
+		System.out.println(aulas);
 	}
 
 }
