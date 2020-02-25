@@ -51,4 +51,9 @@ public class Curso {
 	public String toString() {
 		return "[Curso: " + nome + ", total de tempo: " + this.getTempoTotal() + "]";
 	}
+	
+	// Criação do metodo de matricula de aluno:
+	public void matricula(Aluno aluno) {
+		this.alunos.add(aluno);
+	}
 }
