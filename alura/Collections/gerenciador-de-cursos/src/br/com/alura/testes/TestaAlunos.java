@@ -21,6 +21,11 @@ public class TestaAlunos {
 		}
 		
 		alunos.forEach(aluno -> System.out.println(aluno));
+		
+		// Toda coleção possui o método contains
+		// verifica se o valor está contido na coleção
+		boolean pauloEstaMatriculado = alunos.contains("Paulo Silveira");
+		System.out.println("Paulo Silveira é aluno? " + pauloEstaMatriculado);;
 	}
 
 }
