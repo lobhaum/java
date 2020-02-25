@@ -31,6 +31,9 @@ public class Curso {
 	public List<Aula> getAulas() {
 		return Collections.unmodifiableList(aulas);
 	}
+	public Set<Aluno> getAlunos(){
+		return alunos;
+	}
 
 	// Criação do metodo adiciona aula:
 	public void adiciona(Aula aula) {
