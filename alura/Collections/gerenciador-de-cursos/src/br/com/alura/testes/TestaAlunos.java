@@ -19,6 +19,8 @@ public class TestaAlunos {
 		for (String aluno : alunos) {
 			System.out.println(aluno);
 		}
+		
+		alunos.forEach(aluno -> System.out.println(aluno));
 	}
 
 }
