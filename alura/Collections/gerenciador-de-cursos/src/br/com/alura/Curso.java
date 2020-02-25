@@ -16,6 +16,14 @@ public class Curso {
 	}
 	
 	// Criação dos getters:
+	public String getNome() {
+		return nome;
+	}
+	
+	public String getInstrutor() {
+		return instrutor;
+	}
+	
 	public List<Aula> getAulas() {
 		return aulas; 
 	}
