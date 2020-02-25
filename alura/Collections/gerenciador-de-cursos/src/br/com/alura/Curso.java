@@ -32,7 +32,7 @@ public class Curso {
 		return Collections.unmodifiableList(aulas);
 	}
 	public Set<Aluno> getAlunos(){
-		return alunos;
+		return Collections.unmodifiableSet(alunos);
 	}
 
 	// Criação do metodo adiciona aula:
