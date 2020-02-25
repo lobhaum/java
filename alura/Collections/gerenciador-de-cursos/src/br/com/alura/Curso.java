@@ -29,8 +29,17 @@ public class Curso {
 		return Collections.unmodifiableList(aulas); 
 	}
 	
-	// Criação do metodo adicona aula:
+	// Criação do metodo adiciona aula:
 	public void adiciona(Aula aula){
 		this.aulas.add(aula);
+	}
+	
+	// Criação do metodo de contagem do tempo de aulas:
+	public int getTempoTotal() {
+		int tempoTotal = 0;
+		for ( Aula aula : aulas) {
+			tempoTotal += aula.getTempo();
+		}
+		return tempoTotal;
 	}
 }
