@@ -1,10 +1,24 @@
 package br.com.alura.testes;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class TestaAlunos {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+		Set<String> alunos = new HashSet<>();
+		alunos.add("Rodrigo Turini");
+		alunos.add("Alberto Souza");
+		alunos.add("Nico Steppat");
+		alunos.add("Sergio Lopes");
+		alunos.add("Renan Saggio");
+		alunos.add("Mauricio Aniche");
+		System.out.println(alunos);
+		
+		for (String aluno : alunos) {
+			System.out.println(aluno);
+		}
 	}
 
 }
