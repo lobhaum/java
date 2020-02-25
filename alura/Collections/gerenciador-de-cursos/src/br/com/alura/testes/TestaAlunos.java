@@ -1,13 +1,13 @@
 package br.com.alura.testes;
 
+import java.util.Collection;
 import java.util.HashSet;
-import java.util.Set;
 
 public class TestaAlunos {
 
 	public static void main(String[] args) {
 
-		Set<String> alunos = new HashSet<>();
+		Collection<String> alunos = new HashSet<>();
 		alunos.add("Rodrigo Turini");
 		alunos.add("Alberto Souza");
 		alunos.add("Nico Steppat");
@@ -25,7 +25,7 @@ public class TestaAlunos {
 		// Toda coleção possui o método contains
 		// verifica se o valor está contido na coleção
 		boolean pauloEstaMatriculado = alunos.contains("Paulo Silveira");
-		System.out.println("Paulo Silveira é aluno? " + pauloEstaMatriculado);;
+		System.out.println("Paulo Silveira é aluno? " + pauloEstaMatriculado);
 	}
 
 }
