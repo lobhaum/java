@@ -22,5 +22,11 @@ public class Aluno {
 	public int getNumeroMatricula() {
 		return numeroMatricula;
 	}
+	
+	// Sobreescrição do metodo toSTring:
+	@Override
+	public String toString() {
+		return getNome();
+	}
 
 }
