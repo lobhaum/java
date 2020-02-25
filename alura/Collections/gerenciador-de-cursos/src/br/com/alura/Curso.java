@@ -1,5 +1,6 @@
 package br.com.alura;
 
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -25,6 +26,11 @@ public class Curso {
 	}
 	
 	public List<Aula> getAulas() {
-		return aulas; 
+		return Collections.unmodifiableList(aulas); 
+	}
+	
+	// Criação do metodo adicona aula:
+	public void adiciona(Aula aula){
+		this.aulas.add(aula);
 	}
 }
