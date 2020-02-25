@@ -42,4 +42,9 @@ public class Curso {
 		}
 		return tempoTotal;
 	}
+	//Sobrescrição do metodo toString da classe mãe:
+	@Override
+	public String toString() {
+		return "[Curso: " + nome + ", total de tempo: " + this.getTempoTotal() +"]";
+	}
 }
