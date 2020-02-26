@@ -53,6 +53,10 @@ public class LoginApp extends Application{
 		btSair.setLayoutX((painel.getWidth() - btSair.getWidth()) / 2);
 		btSair.setLayoutY(200);
 		
+		// CSS:
+		painel.setStyle("-fx-background-color: linear-gradient("
+				+ "from 0% 0% to 100% 100%, blue 0%, silver 100%);");
+		
 		
 		
 		
