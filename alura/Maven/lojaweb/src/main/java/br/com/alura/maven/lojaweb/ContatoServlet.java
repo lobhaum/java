@@ -9,18 +9,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns={"/contato"})
-public class ContatoServlet extends HttpServlet{
+import br.com.caelum.stella.tinytype.CPF;
 
-    /**
+@WebServlet(urlPatterns = { "/contato" })
+public class ContatoServlet extends HttpServlet {
+
+	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
 	@Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException { 
-        PrintWriter writer = resp.getWriter();
-        writer.println("<html><h2>Entre em Contato via email</h2></html>");
-        writer.close();
-    }
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		PrintWriter writer = resp.getWriter();
+		writer.println("<html><h2>Entre em Contato via email</h2></html>");
+		new CPF("2222222222").isValido();
+		writer.println("<html><h2>Bata um papo conosco</h2></html>");
+		writer.close();
+	}
 }
