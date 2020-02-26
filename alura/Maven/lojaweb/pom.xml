@@ -77,6 +77,9 @@
 					<version>9.4.3.v20170317</version>
 					<configuration>
 						<scanIntervalSeconds>10</scanIntervalSeconds>
+						<webApp>
+							<contextPath>/loja</contextPath>
+						</webApp>
 					</configuration>
 				</plugin>
 
