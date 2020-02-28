@@ -12,6 +12,8 @@ public class Banco {
 		empresa01.setNome("Caelum");
 		Empresa empresa02 = new Empresa();
 		empresa02.setNome("Alura");
+		lista.add(empresa01);
+		lista.add(empresa02);
 	}
 
 	public void adiciona(Empresa empresa) {
