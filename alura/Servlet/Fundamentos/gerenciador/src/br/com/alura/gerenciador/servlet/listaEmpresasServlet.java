@@ -1,6 +1,8 @@
 package br.com.alura.gerenciador.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,6 +22,14 @@ public class listaEmpresasServlet extends HttpServlet {
 
 	
 		Banco banco = new Banco();
+		List<Empresa> lista = banco.getEmpresas();
+		PrintWriter out = response.getWriter();
+		
+		out.println("<html><body>");
+		
+		
+		
+		out.println("</body></html>");
 	}
 
 }
