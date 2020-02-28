@@ -15,4 +15,8 @@ public class Banco {
 	public List<Empresa> getEmpresas(){
 		return Banco.lista;
 	}
+//	@Override
+//	public String toString() {
+//		return "Nome: " + Banco.lista;
+//	}
 }

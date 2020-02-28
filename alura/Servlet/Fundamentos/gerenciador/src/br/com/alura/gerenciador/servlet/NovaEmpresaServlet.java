@@ -24,6 +24,8 @@ public class NovaEmpresaServlet extends HttpServlet {
 		
 		PrintWriter out = response.getWriter();
 		out.println("<html><body><p>Empresa Cadastrada com sucesso</p>" + "<p><b>Empresa:</b> " +nomeEmpresa + "</p></body></html>");
+	
+		System.out.println(banco.getEmpresas());
 	}
 
 }
