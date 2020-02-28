@@ -10,29 +10,30 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/listaEmpresasServlet")
+@WebServlet("/listaEmpresas")
 public class listaEmpresasServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    public listaEmpresasServlet() {
-        super();
-    }
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public listaEmpresasServlet() {
+		super();
+	}
 
-	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 		Banco banco = new Banco();
 		List<Empresa> lista = banco.getEmpresas();
 		PrintWriter out = response.getWriter();
-		
+
 		out.println("<html><body>");
 		out.println("<ul>");
+		
 		for (Empresa empresa : lista) {
 			out.println("<li>");
-			out.println(empresa.getNome());
+			out.println(empresa.getNome());	
 			out.println("<li>");
 		}
-		
+
 		out.println("</ul>");
 		out.println("</body></html>");
 	}
