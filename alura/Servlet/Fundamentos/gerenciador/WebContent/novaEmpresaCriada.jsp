@@ -10,5 +10,6 @@
 </head>
 <body>
 Empresa <% out.print(nomeEmpresa); %> cadastrada com sucesso!
+A <%= nomeEmpresa %> faz parte agora do nosso escopo.
 </body>
 </html>
