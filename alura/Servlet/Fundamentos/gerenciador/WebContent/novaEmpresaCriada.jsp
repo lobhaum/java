@@ -10,7 +10,7 @@
 <title>Alura</title>
 </head>
 <body>
-Empresa ${3 + 3 } <% out.print(nomeEmpresa); %> cadastrada com sucesso!
+Empresa ${ empresa }  cadastrada com sucesso!
 A <%= nomeEmpresa %> faz parte agora do nosso escopo.
 </body>
 </html>
