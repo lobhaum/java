@@ -8,7 +8,12 @@
 <title>Gerenciamento::Lista Empresas</title>
 </head>
 <body>
-	<p>Lista de empresas</p>
+	<h1>Lista de empresas</h1>
+	<ul>
+		<forEach>
+			
+		</forEach>
+	</ul>
 	<ul>
 		<%
 			List<Empresa> lista = (List<Empresa>) request.getAttribute("empresas");
