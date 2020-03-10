@@ -4,11 +4,19 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Gerenciamento::Cadastro</title>
 </head>
 <body>
 	<form action="${ linkServletNovaEmpresa }" method="POST">
-		Nome:<input type="text" name="nome"> <input type="submit">
+		<div class="field">
+			<label for="fnome">Nome:</label>
+			<input type="text" name="nome">
+		</div>
+		<div class="field">
+			<label for="fdata">Data Abertura:</label>
+			<input type="date" name="data">
+		</div>
+		<input type="submit" value="Cadastrar">
 	</form>
 
 </body>
