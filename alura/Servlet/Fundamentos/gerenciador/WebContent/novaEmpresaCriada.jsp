@@ -1,8 +1,3 @@
-<%
-	
-	String nomeEmpresa = (String) request.getAttribute("empresa");
-	System.out.println(nomeEmpresa);
-%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +6,6 @@
 </head>
 <body>
 Empresa ${ empresa }  cadastrada com sucesso!
-A <%= nomeEmpresa %> faz parte agora do nosso escopo.
+A ${ empresa } faz parte agora do nosso escopo.
 </body>
 </html>
