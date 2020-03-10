@@ -13,7 +13,7 @@
 	<h1>Lista de empresas</h1>
 	<ul>
 		<c:forEach items="${ empresas }" var="empresa">
-			<li>${ empresa.nome } <fmt:formatDate value="${ empresa.dataAbertura }"/></li>
+			<li>${ empresa.nome } - <fmt:formatDate value="${ empresa.dataAbertura }"/></li>
 		</c:forEach>
 	</ul>
 </body>
