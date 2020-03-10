@@ -2,10 +2,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Alura</title>
+<title>Gerenciamento::Cadastrado</title>
 </head>
 <body>
-Empresa ${ empresa }  cadastrada com sucesso!
-A ${ empresa } faz parte agora do nosso escopo.
+	<p>Empresa ${ empresa } cadastrada com sucesso!</p>
+	<h2>A ${ empresa } faz parte agora do nosso escopo.</h2>
 </body>
 </html>
