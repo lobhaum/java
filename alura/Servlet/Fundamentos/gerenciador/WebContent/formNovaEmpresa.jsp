@@ -5,8 +5,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<c:url value="/novaEmpresa" />
-	<form action="/gerenciador/novaEmpresa" method="POST">
+	<form action="<c:url value="/novaEmpresa" />" method="POST">
 		Nome:<input type="text" name="nome"> <input type="submit">
 	</form>
 
