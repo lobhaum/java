@@ -8,7 +8,7 @@
 <title>Gerenciamento::Lista Empresas</title>
 </head>
 <body>
-
+	<p>Lista de empresas</p>
 	<ul>
 		<%
 			List<Empresa> lista = (List<Empresa>) request.getAttribute("empresas");
