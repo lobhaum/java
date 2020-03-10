@@ -11,7 +11,7 @@
 <body>
 	<h1>Lista de empresas</h1>
 	<ul>
-		<forEach>
+		<c:forEach items="${ empresas }">
 			
 		</forEach>
 	</ul>
