@@ -33,7 +33,7 @@ public class NovaEmpresaServlet extends HttpServlet {
 		empresa.setDataAbertura(dataAbertura);
 		Banco banco = new Banco();
 		banco.adiciona(empresa);
-	
+
 		// chamar o JSP:
 		RequestDispatcher rd = request.getRequestDispatcher("/novaEmpresaCriada.jsp");
 		request.setAttribute("empresa", empresa.getNome());

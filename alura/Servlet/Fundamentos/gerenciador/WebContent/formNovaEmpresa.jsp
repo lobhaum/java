@@ -14,7 +14,7 @@
 		</div>
 		<div class="field">
 			<label for="fdata">Data Abertura:</label>
-			<input type="date" name="data">
+			<input type="text" name="data">
 		</div>
 		<input type="submit" value="Cadastrar">
 	</form>
