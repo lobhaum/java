@@ -23,19 +23,7 @@ public class listaEmpresasServlet extends HttpServlet {
 
 		Banco banco = new Banco();
 		List<Empresa> lista = banco.getEmpresas();
-		PrintWriter out = response.getWriter();
-
-		out.println("<html><body>");
-		out.println("<ul>");
 		
-		for (Empresa empresa : lista) {
-			out.print("<li>");
-			out.print(empresa.getNome());	
-			out.print("<li>");
-		}
-
-		out.println("</ul>");
-		out.println("</body></html>");
 	}
 
 }
