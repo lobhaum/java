@@ -15,20 +15,5 @@
 			<li>${ empresa.nome }</li>
 		</c:forEach>
 	</ul>
-	<ul>
-		<%
-			List<Empresa> lista = (List<Empresa>) request.getAttribute("empresas");
-			for (Empresa empresa : lista) {
-		%>
-		<li>
-			<%
-				out.print(empresa.getNome());
-			%>
-		</li>
-		<%
-			}
-		%>
-	</ul>
-
 </body>
 </html>
