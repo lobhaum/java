@@ -11,9 +11,9 @@
 <body>
 	<h1>Lista de empresas</h1>
 	<ul>
-		<c:forEach items="${ empresas }">
+		<c:forEach items="${ empresas }" var="empresa">
 			
-		</forEach>
+		</c:forEach>
 	</ul>
 	<ul>
 		<%
