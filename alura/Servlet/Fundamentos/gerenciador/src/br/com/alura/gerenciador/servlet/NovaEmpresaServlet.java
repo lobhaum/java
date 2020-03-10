@@ -21,12 +21,7 @@ public class NovaEmpresaServlet extends HttpServlet {
 		empresa.setNome(nomeEmpresa);
 		Banco banco = new Banco();
 		banco.adiciona(empresa);
-		
-//		PrintWriter out = response.getWriter();
-//		out.println("<html><body><p>Empresa Cadastrada com sucesso</p>" + "<p><b>Empresa:</b> " +nomeEmpresa + "</p></body></html>");
 	
-		// System.out.println(banco.getEmpresas());
-		
 		// chamar o JSP:
 		RequestDispatcher rd = request.getRequestDispatcher("/novaEmpresaCriada.jsp");
 		request.setAttribute("empresa", empresa.getNome());
