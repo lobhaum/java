@@ -26,6 +26,9 @@ public class NovaEmpresaServlet extends HttpServlet {
 //		out.println("<html><body><p>Empresa Cadastrada com sucesso</p>" + "<p><b>Empresa:</b> " +nomeEmpresa + "</p></body></html>");
 	
 		// System.out.println(banco.getEmpresas());
+		
+		// chamar o JSP:
+		request.getRequestDispatcher("/novaEmpresaCriada.jsp");
 	}
 
 }
