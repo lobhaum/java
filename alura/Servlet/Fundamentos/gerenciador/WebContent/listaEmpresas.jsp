@@ -9,15 +9,18 @@
 <body>
 
 	<ul>
-		
-		for (Empresa empresa : lista) {
-			out.print("<li>");
-			out.print(empresa.getNome());	
-			out.print("
-		<li>");
-		}
-
+		<%
+			for (Empresa empresa : lista) {
+		%>
+		<li>
+			<%
+				out.print(empresa.getNome());
+			%>
+		</li>
+		<%
+			}
+		%>
 	</ul>
-		
+
 </body>
 </html>
