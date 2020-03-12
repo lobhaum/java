@@ -14,9 +14,12 @@ public class TestaInsercaoComParametros {
 		ConnectionFactory cf = new ConnectionFactory(); // Criando objeto de conexão
 		Connection con = cf.recuperaConexao(); // conectando ao banco de dados
 		Statement stm = con.createStatement(); // cria um estado para enviar requisições ao banco de dados
+		nome = "antivirus";
+		descricao = "Kaspersky Security Cloud";
 		stm.execute("INSERT INTO produto (nome, descricao) VALUES" 
 		+ "('" + nome + "','" + descricao + "')",
 				Statement.RETURN_GENERATED_KEYS);
+		stm.close();
 	}
 
 }
