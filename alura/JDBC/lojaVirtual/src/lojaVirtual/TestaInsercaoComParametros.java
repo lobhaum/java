@@ -16,9 +16,9 @@ public class TestaInsercaoComParametros {
 		Statement stm = con.createStatement(); // cria um estado para enviar requisições ao banco de dados
 		nome = "antivirus";
 		descricao = "Kaspersky Security Cloud";
-		stm.execute("INSERT INTO produto (nome, descricao) VALUES" 
-		+ "('" + nome + "','" + descricao + "')",
-				Statement.RETURN_GENERATED_KEYS);
+		String sql = "INSERT INTO produto (nome, descricao) VALUES" 
+				+ "('" + nome + "','" + descricao + "')"; 
+		stm.execute(sql,Statement.RETURN_GENERATED_KEYS);
 		stm.close();
 	}
 
