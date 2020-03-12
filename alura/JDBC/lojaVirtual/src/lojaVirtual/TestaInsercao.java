@@ -13,14 +13,20 @@ public class TestaInsercao {
 		Connection connection = factory.recuperaConexao();
 		
 		Statement stm = connection.createStatement();
+		// metodo execute retorna true quando é lista
+		// metodo execute insert retorna false
 		//boolean resultado = 
-		stm.execute("INSERT INTO produto (nome, descricao) VALUES ('mouse', 'Mouse Microsoft sem fio')"
+		stm.execute("INSERT INTO produto (nome, descricao) VALUES ('ssd', 'SSD Kingston A400, 240GB'),"
+				+ "('notebook','Acer Aspire 5 i5-8265U 8GB, 1TB, SSD 128GB'),"
+				+ "('videogame','Microsoft Xbox One S 1TB'),"
+				+ "('mainboard','Gigabyte Z390 M Gaming LGA 1151 DDR4');"
 				, Statement.RETURN_GENERATED_KEYS);
 		ResultSet rst = stm.getGeneratedKeys();
 		while(rst.next()) {
 			Integer id = rst.getInt(1);
 			
 		}
+		stm.close();
 		
 		
 	}
