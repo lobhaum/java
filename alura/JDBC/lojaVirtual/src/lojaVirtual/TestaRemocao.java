@@ -12,7 +12,7 @@ public class TestaRemocao {
 		Connection connection = factory.recuperaConexao(); // fazendo a conexao com o banco de dados
 		
 		Statement stm = connection.createStatement(); // instancia a instrução sql no objeto stm
-		stm.execute("DELETE FROM produto WHERE id > 2  AND id < 5;");
+		stm.execute("DELETE FROM produto WHERE id > 12  AND id < 15;");
 		
 		Integer linhasModificadas = stm.getUpdateCount();
 		
