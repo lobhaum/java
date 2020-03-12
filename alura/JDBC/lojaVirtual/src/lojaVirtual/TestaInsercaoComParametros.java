@@ -7,7 +7,10 @@ import java.sql.Statement;
 public class TestaInsercaoComParametros {
 
 	public static void main(String[] args) throws SQLException {
-
+		// instanciando os objetos string para query
+		String nome = null;
+		String descricao = null;
+		
 		ConnectionFactory cf = new ConnectionFactory(); // Criando objeto de conexão
 		Connection con = cf.recuperaConexao(); // conectando ao banco de dados
 		Statement stm = con.createStatement(); // cria um estado para enviar requisições ao banco de dados
