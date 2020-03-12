@@ -2,6 +2,7 @@ package lojaVirtual;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class TestaInsercaoComParametros {
 
@@ -9,7 +10,8 @@ public class TestaInsercaoComParametros {
 
 		ConnectionFactory cf = new ConnectionFactory(); // Criando objeto de conexão
 		Connection con = cf.recuperaConexao(); // conectando ao banco de dados
-		
+		Statement stm = con.createStatement(); // cria um estado para enviar requisições ao banco de dados
+		stm.execute("", Statement.RETURN_GENERATED_KEYS);		
 	}
 
 }
