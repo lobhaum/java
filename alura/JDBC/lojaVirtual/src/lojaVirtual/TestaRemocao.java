@@ -11,8 +11,9 @@ public class TestaRemocao {
 		ConnectionFactory factory = new ConnectionFactory(); // instanciando a connectionfactory
 		Connection connection = factory.recuperaConexao(); // fazendo a conexao com o banco de dados
 		
-		String sql = "DELETE FROM produto WHERE id = 18;";
+		String sql = "DELETE FROM produto WHERE id = ?;";
 		PreparedStatement pstmt = connection.prepareStatement(sql); // instancia a instrução sql no objeto stm
+		pstmt.setInt(1,19);
 		pstmt.execute();
 		
 		Integer linhasModificadas = pstmt.getUpdateCount();
