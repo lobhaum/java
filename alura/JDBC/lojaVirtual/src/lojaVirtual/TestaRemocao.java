@@ -1,8 +1,8 @@
 package lojaVirtual;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 public class TestaRemocao {
 
@@ -11,10 +11,11 @@ public class TestaRemocao {
 		ConnectionFactory factory = new ConnectionFactory(); // instanciando a connectionfactory
 		Connection connection = factory.recuperaConexao(); // fazendo a conexao com o banco de dados
 		
-		Statement stm = connection.createStatement(); // instancia a instrução sql no objeto stm
-		stm.execute("DELETE FROM produto WHERE id > 12  AND id < 15;");
+		String sql = "DELETE FROM produto WHERE id = 18;";
+		PreparedStatement pstmt = connection.prepareStatement(sql); // instancia a instrução sql no objeto stm
+		pstmt.execute();
 		
-		Integer linhasModificadas = stm.getUpdateCount();
+		Integer linhasModificadas = pstmt.getUpdateCount();
 		
 		System.out.println(linhasModificadas);
 		
