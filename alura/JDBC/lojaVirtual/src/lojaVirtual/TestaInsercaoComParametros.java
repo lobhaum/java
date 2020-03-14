@@ -28,6 +28,10 @@ public class TestaInsercaoComParametros {
 		String sql = "INSERT INTO produto (nome, descricao) VALUES (?, ?);";
 		System.out.println(sql);
 		PreparedStatement pstmt = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+		adicionarVariavel(nome, descricao, pstmt);
+	}
+
+	private static void adicionarVariavel(String nome, String descricao, PreparedStatement pstmt) throws SQLException {
 		pstmt.setString(1, nome);
 		pstmt.setString(2, descricao);
 		pstmt.execute();
