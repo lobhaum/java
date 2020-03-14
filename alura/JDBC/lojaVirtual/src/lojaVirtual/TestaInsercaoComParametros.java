@@ -11,10 +11,6 @@ public class TestaInsercaoComParametros {
 		/*
 		 * // instanciando os objetos string para query // String nome = null; // String
 		 * descricao = null;
-		 */
-		ConnectionFactory cf = new ConnectionFactory(); // Criando objeto de conexão
-		Connection con = cf.recuperaConexao(); // conectando ao banco de dados
-		/*
 		 * // Usando Prepared Statement: // Statement stm = con.createStatement(); //
 		 * cria um estado para enviar // requisições ao banco de dados
 		 * 
@@ -26,6 +22,8 @@ public class TestaInsercaoComParametros {
 		 * 
 		 * // Usando PreparedStatement:
 		 */		
+		ConnectionFactory cf = new ConnectionFactory(); // Criando objeto de conexão
+		Connection con = cf.recuperaConexao(); // conectando ao banco de dados
 		String sql = "INSERT INTO produto (nome, descricao) VALUES (?, ?);";
 		System.out.println(sql);
 		PreparedStatement pstmt = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
