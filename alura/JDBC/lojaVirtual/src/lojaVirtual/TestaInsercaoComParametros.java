@@ -25,13 +25,12 @@ public class TestaInsercaoComParametros {
 		ConnectionFactory cf = new ConnectionFactory(); // Criando objeto de conexão
 		Connection con = cf.recuperaConexao(); // conectando ao banco de dados
 		String sql = "INSERT INTO produto (nome, descricao) VALUES (?, ?);";
-		System.out.println(sql);
 		PreparedStatement pstmt = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-		adicionarVariavel("SmartTV", "45 polegadas", pstmt);
-		adicionarVariavel("Radio", "Radio Vintage Torcedor de Futebol", pstmt);
+		adicionarProduto("SmartTV", "45 polegadas", pstmt);
+		adicionarProduto("Radio", "Radio Vintage Torcedor de Futebol", pstmt);
 	}
 
-	private static void adicionarVariavel(String nome, String descricao, PreparedStatement pstmt) throws SQLException {
+	private static void adicionarProduto(String nome, String descricao, PreparedStatement pstmt) throws SQLException {
 		pstmt.setString(1, nome);
 		pstmt.setString(2, descricao);
 		pstmt.execute();
