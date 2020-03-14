@@ -24,6 +24,7 @@ public class TestaInsercaoComParametros {
 		 */		
 		ConnectionFactory cf = new ConnectionFactory(); // Criando objeto de conexão
 		Connection con = cf.recuperaConexao(); // conectando ao banco de dados
+		con.setAutoCommit(false); // gera o controle da transação do inicio ao fim
 		String sql = "INSERT INTO produto (nome, descricao) VALUES (?, ?);";
 		PreparedStatement pstmt = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 		adicionarProduto("SmartTV", "45 polegadas", pstmt);
@@ -34,7 +35,7 @@ public class TestaInsercaoComParametros {
 		pstmt.setString(1, nome);
 		pstmt.setString(2, descricao);
 		pstmt.execute();
-		pstmt.close();
+		//pstmt.close();
 	}
 
 }
