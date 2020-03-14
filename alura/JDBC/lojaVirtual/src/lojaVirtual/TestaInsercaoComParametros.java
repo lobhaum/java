@@ -29,6 +29,9 @@ public class TestaInsercaoComParametros {
 		PreparedStatement pstmt = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 		adicionarProduto("SmartTV", "45 polegadas", pstmt);
 		adicionarProduto("Radio", "Radio Vintage Torcedor de Futebol", pstmt);
+		
+		pstmt.close();
+		con.close();
 	}
 
 	private static void adicionarProduto(String nome, String descricao, PreparedStatement pstmt) throws SQLException {
