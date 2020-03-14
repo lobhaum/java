@@ -25,13 +25,22 @@ public class TestaInsercaoComParametros {
 		ConnectionFactory cf = new ConnectionFactory(); // Criando objeto de conexão
 		Connection con = cf.recuperaConexao(); // conectando ao banco de dados
 		con.setAutoCommit(false); // gera o controle da transação do inicio ao fim
-		String sql = "INSERT INTO produto (nome, descricao) VALUES (?, ?);";
-		PreparedStatement pstmt = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-		adicionarProduto("SmartTV", "45 polegadas", pstmt);
-		adicionarProduto("Radio", "Radio Vintage Torcedor de Futebol", pstmt);
+		try {
+			String sql = "INSERT INTO produto (nome, descricao) VALUES (?, ?);";
+			PreparedStatement pstmt = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+			adicionarProduto("SmartTV", "45 polegadas", pstmt);
+			adicionarProduto("Radio", "Radio Vintage Torcedor de Futebol", pstmt);
+			con.commit();
+			
+			pstmt.close();
+			con.close();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("ROLLBACK EXECUTADO");
+			con.rollback();
+		}
 		
-		pstmt.close();
-		con.close();
 	}
 
 	private static void adicionarProduto(String nome, String descricao, PreparedStatement pstmt) throws SQLException {
