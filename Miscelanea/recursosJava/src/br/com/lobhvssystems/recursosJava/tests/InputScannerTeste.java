@@ -2,7 +2,7 @@ package br.com.lobhvssystems.recursosJava.tests;
 
 import java.util.Scanner;
 
-public class InputTeste {
+public class InputScannerTeste {
 
 	public static void main(String[] args) {
 
