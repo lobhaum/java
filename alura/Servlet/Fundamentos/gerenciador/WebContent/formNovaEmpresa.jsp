@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Gerenciamento::Cadastro</title>
+<title>Gerenciamento::Edição</title>
 </head>
 <body>
 	<form action="${ linkServletNovaEmpresa }" method="POST">
