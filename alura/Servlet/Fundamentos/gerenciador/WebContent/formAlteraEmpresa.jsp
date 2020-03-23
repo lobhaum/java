@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Gerenciamento::Cadastro</title>
+<title>Gerenciamento::Alterar</title>
 </head>
 <body>
 	<form action="${ linkServletNovaEmpresa }" method="POST">
@@ -18,6 +18,10 @@
 			<label for="fdata">Data Abertura:</label> <input type="text"
 				name="data"
 				value="<fmt:formatDate value="${ empresa.dataAbertura }" pattern="dd/MM/yyyy"/>" />
+		</div>
+		<div class="field">
+			 <input type="hidden" name="id"
+				value="${ empresa.id }"  >
 		</div>
 		<input type="submit" value="Alterar">
 	</form>
