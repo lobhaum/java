@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.alura.gerenciador.controle.ListaEmpresas;
+
 @WebServlet("/entrada")
 public class UnicaEntradaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -18,6 +20,10 @@ public class UnicaEntradaServlet extends HttpServlet {
 		String paramentroParaAcao = request.getParameter("controle");
 		if (paramentroParaAcao.equals("listaEmpresas")) {
 			System.out.println("Lista todas as empresas");
+			
+			ListaEmpresas controle = new ListaEmpresas();
+			controle.executa(request, response);
+			
 		} else if (paramentroParaAcao.equals("editaEmpresa")) {
 			System.out.println("Edita empresa selecionada");
 		} else if (paramentroParaAcao.equals("excluiEmpresa")) {
