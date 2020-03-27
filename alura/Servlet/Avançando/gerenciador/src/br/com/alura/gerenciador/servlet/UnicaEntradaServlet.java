@@ -8,7 +8,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.alura.gerenciador.controle.EditaEmpresa;
 import br.com.alura.gerenciador.controle.ListaEmpresas;
+import br.com.alura.gerenciador.controle.MostraEmpresa;
+import br.com.alura.gerenciador.controle.RemoveEmpresa;
 
 @WebServlet("/entrada")
 public class UnicaEntradaServlet extends HttpServlet {
@@ -17,17 +20,26 @@ public class UnicaEntradaServlet extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		String paramentroParaAcao = request.getParameter("controle");
-		if (paramentroParaAcao.equals("listaEmpresas")) {
-			System.out.println("Lista todas as empresas");
-			
+		String parametroParaAcao = request.getParameter("controle");
+		if (parametroParaAcao.equals("listaEmpresas")) {
+
 			ListaEmpresas controle = new ListaEmpresas();
 			controle.executa(request, response);
+
+		} else if (parametroParaAcao.equals("editaEmpresa")) {
 			
-		} else if (paramentroParaAcao.equals("editaEmpresa")) {
-			System.out.println("Edita empresa selecionada");
-		} else if (paramentroParaAcao.equals("excluiEmpresa")) {
-			System.out.println("Exclui empresa slecionada");
+			EditaEmpresa controle = new EditaEmpresa();
+			controle.executa(request, response);
+
+		} else if(parametroParaAcao.equals("mostraEmpresa")){
+			
+			MostraEmpresa controle = new MostraEmpresa();
+			controle.executa(request,response);
+			
+		}else if (parametroParaAcao.equals("excluiEmpresa")) {
+			
+			RemoveEmpresa controle = new RemoveEmpresa();
+			controle.executa(request, response);
 		}
 	}
 
