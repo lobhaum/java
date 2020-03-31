@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.alura.gerenciador.modelo.Banco;
 import br.com.alura.gerenciador.modelo.Empresa;
 
-@WebServlet("/alteraEmpresa")
+//@WebServlet("/alteraEmpresa")
 public class AlteraEmpresaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -41,7 +41,7 @@ public class AlteraEmpresaServlet extends HttpServlet {
 		empresa.setNome(nomeEmpresa);
 		empresa.setDataAbertura(dataAbertura);
 		
-		response.sendRedirect("listaEmpresas");
+		response.sendRedirect("entrada?controle=listaEmpresas");
 		
 		
 

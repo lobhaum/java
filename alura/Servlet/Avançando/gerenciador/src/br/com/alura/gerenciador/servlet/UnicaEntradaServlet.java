@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.alura.gerenciador.controle.EditaEmpresa;
 import br.com.alura.gerenciador.controle.ListaEmpresas;
 import br.com.alura.gerenciador.controle.MostraEmpresa;
+import br.com.alura.gerenciador.controle.NovaEmpresa;
 import br.com.alura.gerenciador.controle.RemoveEmpresa;
 
 @WebServlet("/entrada")
@@ -38,9 +39,13 @@ public class UnicaEntradaServlet extends HttpServlet {
 			
 		}else if (parametroParaAcao.equals("excluiEmpresa")) {
 			
+			
 			RemoveEmpresa controle = new RemoveEmpresa();
 			controle.executa(request, response);
-		}
+		}else if (parametroParaAcao.equals("novaEmpresa")) {
+	        NovaEmpresa acao = new NovaEmpresa();
+	        acao.executa(request, response);
+	} 
 	}
 
 }

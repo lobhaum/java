@@ -20,7 +20,7 @@ public class ListaEmpresas {
 		
 		request.setAttribute("empresas", lista);
 		
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("/listaEmpresas.jsp");
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("entrada?controle=listaEmpresas.jsp");
 		requestDispatcher.forward(request, response);
 		
 
