@@ -1,6 +1,7 @@
 package br.com.alura.jpa.modelo;
 
 public class Conta {
+	private Long id;
 	private Integer agencia;
 	private Integer numero;
 	private String titular;
@@ -11,6 +12,14 @@ public class Conta {
 
 	public void setAgencia(Integer agencia) {
 		this.agencia = agencia;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public Integer getNumero() {
