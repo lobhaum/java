@@ -1,9 +1,11 @@
 package br.com.alura.jpa.modelo;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
 public class Conta {
+	@Id
 	private Long id;
 	private Integer agencia;
 	private Integer numero;
