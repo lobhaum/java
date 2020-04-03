@@ -14,8 +14,8 @@ public class CriaContaSaldo {
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
 
 		Conta conta = new Conta();
-		conta.setTitular("Reinaldo");
-		conta.setNumero(1237);
+		conta.setTitular("Marcia");
+		conta.setNumero(1238);
 		conta.setAgencia(4321);
 		conta.setSaldo(500.0);
 
@@ -26,6 +26,7 @@ public class CriaContaSaldo {
 
 		entityManager.getTransaction().commit();
 		entityManager.close();
+		System.out.println("ID da Conta da " + conta.getTitular() + " -> " + conta.getId());
 		conta.setSaldo(3871.12);
 	}
 
