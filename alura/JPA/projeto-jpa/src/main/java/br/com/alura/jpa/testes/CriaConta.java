@@ -12,14 +12,17 @@ public class CriaConta {
 
 		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("alura");
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
-		
-		
+
 		Conta conta = new Conta();
 		conta.setTitular("Leonardo");
-		conta.setNumero(1234);
+		conta.setNumero(1234);	
 		conta.setAgencia(4321);
-		
+
+		entityManager.getTransaction().begin();
+
 		entityManager.persist(conta);
+
+		entityManager.getTransaction().commit();
 	}
 
 }
