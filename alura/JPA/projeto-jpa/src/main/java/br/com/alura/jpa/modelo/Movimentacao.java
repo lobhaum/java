@@ -10,8 +10,8 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 @Entity
 public class Movimentacao {
@@ -26,7 +26,7 @@ public class Movimentacao {
 	private String descricao;
 	private BigDecimal valor;
 
-	@OneToMany
+	@ManyToMany
 	private List<Categoria> categoria; // posso sacar o dinheiro para pagar uma viagem
 
 	@ManyToOne
