@@ -14,17 +14,19 @@ public class CriaContaSaldo {
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
 
 		Conta conta = new Conta();
-		conta.setTitular("Madagascar");
-		conta.setNumero(1236);
+		conta.setTitular("Reinaldo");
+		conta.setNumero(1237);
 		conta.setAgencia(4321);
 		conta.setSaldo(500.0);
 
 		entityManager.getTransaction().begin();
 
 		entityManager.persist(conta);
-		conta.setSaldo(349871.11);
+		
 
 		entityManager.getTransaction().commit();
+		entityManager.close();
+		conta.setSaldo(3871.12);
 	}
 
 }
