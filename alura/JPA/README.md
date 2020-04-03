@@ -23,3 +23,10 @@ Um relacionamento do tipo Muitos-para-Um deve usar anotação a @ManyToOne
 A anotação @ManyToOne causa a criação de uma chave estrangeira
 A JPA carrega automaticamente o relacionamento ao carregar a entidade
 
+Como relacionar uma entidade com uma coleção de uma outra entidade
+Para tal, temos as anotações @OneToMany e @ManyToMany, dependendo da cardinalidade
+Um relacionamento @*ToMany precisa de uma tabela extra para a representação no banco de dados
+Aprendemos também como relacionar uma entidade com uma outra entidade
+Para tal, temos as anotações @OneToOne e @ManyToOne, dependendo da cardinalidade
+Ao persistir uma entidade, devemos persistir as entidades transientes do relacionamento
+
