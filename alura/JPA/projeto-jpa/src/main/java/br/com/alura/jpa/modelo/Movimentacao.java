@@ -2,6 +2,7 @@ package br.com.alura.jpa.modelo;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -10,6 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Movimentacao {
@@ -17,16 +19,19 @@ public class Movimentacao {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	@Enumerated(EnumType.STRING)
 	private TipoMovimentacao tipoMovimentacao;
 	private LocalDateTime data;
 	private String descricao;
 	private BigDecimal valor;
 
+	@OneToMany
+	private List<Categoria> categoria; // posso sacar o dinheiro para pagar uma viagem
+
 	@ManyToOne
 	private Conta conta;
-	
+
 	public Conta getConta() {
 		return conta;
 	}
