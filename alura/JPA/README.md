@@ -18,4 +18,8 @@ Para essa sincronização acontecer, a entidade precisa estar gerenciada (Manage
 Os estados de uma entidade são: Managed, Detached, Transient e Removed
 Os métodos do EntityManager, como persist, merge ou remove alteram o estado da entidade
 
+Relacionamentos entre entidades precisam ser configurados pelas anotações no atributo que define o relacionamento na classe
+Um relacionamento do tipo Muitos-para-Um deve usar anotação a @ManyToOne
+A anotação @ManyToOne causa a criação de uma chave estrangeira
+A JPA carrega automaticamente o relacionamento ao carregar a entidade
 
