@@ -26,6 +26,14 @@ public class Movimentacao {
 	private String descricao;
 	private BigDecimal valor;
 
+	public List<Categoria> getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(List<Categoria> categoria) {
+		this.categoria = categoria;
+	}
+
 	@ManyToMany
 	private List<Categoria> categoria; // posso sacar o dinheiro para pagar uma viagem
 
